@@ -1,0 +1,21 @@
+{
+  "name": "angular_circle_img",
+  "version": "0.0.0",
+  "description": "Flexible directive to render a source image into a circle.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "image",
+    "circle"
+  ],
+  "author": "Alexander Nied",
+  "license": "None",
+  "devDependencies": {
+    "express": "~4.13.3",
+    "colors": "~1.1.2"
+  }
+}
