@@ -7,7 +7,7 @@
 - Get the app shell setup
     + ~~Express server up and running for development~~
     + ~~Bower & Example/Dev Page~~
-    + Gulp tasks to build src into example and dist
+    + ~~Gulp tasks to build src into example and dist~~
 - Build the directive (DUMB)
     + Get the directive available in the example/dev environment
     + Build it to work as designed
