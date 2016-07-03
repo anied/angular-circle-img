@@ -16,6 +16,7 @@
   "license": "None",
   "devDependencies": {
     "colors": "~1.1.2",
+    "del": "^2.2.1",
     "express": "~4.13.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
