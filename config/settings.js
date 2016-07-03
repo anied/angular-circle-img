@@ -1,5 +1,5 @@
 {
 	"port": 8000,
-	"webroot": "src",
+	"webroot": "example",
 	"approot": "index.html"
 }
