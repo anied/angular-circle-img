@@ -18,7 +18,7 @@ gulp.task('build', ['clean'], function() {
     .pipe(gulp.dest('dist/js'))
     .pipe(sourcemaps.init())
       .pipe(uglify())
-      .pipe(concat('.min.js'))
+      .pipe(concat('angularCircleImg.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/js'));
 });
