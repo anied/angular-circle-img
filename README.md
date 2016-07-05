@@ -9,7 +9,7 @@
     + ~~Bower & Example/Dev Page~~
     + ~~Gulp tasks to build src into example and dist~~
 - Build the directive (DUMB)
-    + Get the directive available in the example/dev environment
+    + ~~Get the directive available in the example/dev environment~~
     + Build it to work as designed
 - Polish (SMART)
     + Figure out the best way to package and expose
