@@ -6,13 +6,25 @@
 	<!-- Not really using any minified scripts or styles as this is being run locally... -->
 	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 	<script src="lib/jquery/dist/jquery.js" ></script>
-	<script src="lib/angular.js"></script>
+	<script src="lib/angular/angular.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="js/angularCircleImg.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<div class="container">
 		<h1>Angular Circle Img Example Page</h1>
 		<p class="lead">(Also to be leveraged for the purposes of development of the package)</p>
+		<div class="container" id="appWrapper" ng-app="app">
+			<form class="form-inline">
+			  <div class="form-group">
+			    <label for="username">Name</label>
+			    <input type="text" class="form-control" id="username" placeholder="&lt;your name&gt;" ng-model="mainCtl.username">
+			  </div>
+		  	</form>
+			<h3 ng-hide="!mainCtl.username">Hello, {{mainCtl.username}}!</h3>
+			<circle-img></circle-img>
+		</div>
 	</div>
 </body>
 </html>
