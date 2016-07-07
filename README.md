@@ -12,9 +12,9 @@
     + ~~Get the directive available in the example/dev environment~~
     + Build it to work as designed
 - Polish (SMART)
-    + Figure out the best way to package and expose
-        * Standard module?
-        * Browserify?
-        * ES6?
-        * Something else?
+    + ~~Figure out the best way to package and expose~~
+        * ~~Standard module?~~
+        * ~~**Browserify**?~~
+        * ~~**ES6**?~~
+        * ~~Something else?~~
 - Nicen up example page for easier public consumption.
