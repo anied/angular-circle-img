@@ -6,6 +6,8 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var babel = require('babelify');
 var concat = require('gulp-concat');
+var del = require('del');
+var uglify = require('gulp-uglify');
 
 
 function compile(watch) {
@@ -17,6 +19,8 @@ function compile(watch) {
       .pipe(source('build.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(uglify())
+      .pipe(concat('angularCircleImg.min.js'))
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./dist/'))
       .pipe(gulp.dest('./example/dist/'));
@@ -34,9 +38,14 @@ function compile(watch) {
 
 function watch() {
   return compile(true);
-};
+}
+
+
+gulp.task('clean', function() {
+  return del(['dist/**/*.js', 'dist/**/*.map', 'example/dist/**/*.js', 'example/dist/**/*.map']);
+});
 
 gulp.task('build', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
 
-gulp.task('default', ['watch']);
+gulp.task('develop', ['watch']);
