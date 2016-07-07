@@ -1,3 +1,4 @@
+// Based largely on https://gist.github.com/danharper/3ca2273125f500429945
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
