@@ -1,4 +1,5 @@
 export default function circleImg() {
+	//TODO-- this could be more ES6-y -- use a class instead
 	var directive = {};
 	directive.restrict = 'E';
 	directive.scope = {
@@ -7,7 +8,7 @@ export default function circleImg() {
 		ciAlt: '@'
 	};
 	directive.link = function (scope, elem, attrs) {
-		console.log('it worked!');
+		console.log('directive.link');
 	};
 
 	directive.template = `
@@ -15,6 +16,8 @@ export default function circleImg() {
 			<img src="{{ciSrc}}" alt="{{ciAlt}}">
 		</div>
 	`;
+
+	directive.controller = "circleImgCtl as circleImgCtl";
 
 	return directive;
 }
