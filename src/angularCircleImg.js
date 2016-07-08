@@ -51,7 +51,7 @@ export default function circleImg($timeout) {
 
 	directive.template = `
 		<div class="ci-wrapper" ng-style="{{circleImgCtl.wrapperStyle()}}">
-			<img src="{{ciSrc}}" alt="{{ciAlt}}" height="{{height}}" width="{{width}}">
+			<img ng-src="{{ciSrc}}" alt="{{ciAlt}}" height="{{height}}" width="{{width}}">
 		</div>
 	`;
 
