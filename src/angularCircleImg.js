@@ -12,7 +12,7 @@ export default function circleImg() {
 	};
 
 	directive.template = `
-		<div class="ci-wrapper">
+		<div class="ci-wrapper" ng-style="{{circleImgCtl.wrapperStyle()}}">
 			<img src="{{ciSrc}}" alt="{{ciAlt}}">
 		</div>
 	`;

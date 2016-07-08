@@ -9,6 +9,7 @@ var babel = require('babelify');
 var concat = require('gulp-concat');
 var del = require('del');
 var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate');
 
 
 function compile(watch) {
@@ -20,6 +21,7 @@ function compile(watch) {
       .pipe(source('dist/angularCircleImg.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(ngAnnotate())
       .pipe(uglify())
       .pipe(concat('angularCircleImg.min.js'))
       .pipe(sourcemaps.write('./'))
