@@ -47,7 +47,7 @@ function compile(watch, debug_flag) {
 }
 
 function watch() {
-  return compile(true, ralse);
+  return compile(true, false);
 }
 
 function watch_debug() {
