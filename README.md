@@ -17,4 +17,5 @@
         * ~~**Browserify**?~~
         * ~~**ES6**?~~
         * ~~Something else?~~
+- Refactor to leverage more ES6 features
 - Nicen up example page for easier public consumption.
