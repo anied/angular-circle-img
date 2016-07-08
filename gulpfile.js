@@ -12,8 +12,15 @@ var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 
 
-function compile(watch) {
+function compile(watch, debug_flag) {
   var bundler = watchify(browserify('./src/index.js', { debug: true }).transform(babel, {presets: ["es2015"]}));
+
+  var uglifyOptions = {
+    mangle: !debug_flag,
+    compress: {
+      drop_debugger: !debug_flag
+    }
+  };
 
   function rebundle() {
     bundler.bundle()
@@ -22,7 +29,7 @@ function compile(watch) {
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(ngAnnotate())
-      .pipe(uglify())
+      .pipe(uglify(uglifyOptions))
       .pipe(concat('angularCircleImg.min.js'))
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./dist/'))
@@ -40,9 +47,12 @@ function compile(watch) {
 }
 
 function watch() {
-  return compile(true);
+  return compile(true, ralse);
 }
 
+function watch_debug() {
+  return compile(true, true);
+}
 
 gulp.task('clean', function() {
   return del(['dist/**/*.js', 'dist/**/*.map', 'example/dist/**/*.js', 'example/dist/**/*.map']);
@@ -50,5 +60,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
+gulp.task('watch_debug', function() { return watch_debug(); });
 
 gulp.task('develop', ['watch']);
+gulp.task('develop:debug', ['watch_debug']);
