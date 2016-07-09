@@ -22,10 +22,14 @@
 			    <input type="text" class="form-control" id="username" placeholder="&lt;your name&gt;" ng-model="mainCtl.username">
 			  </div>
 		  	</form>
-			<h3 ng-hide="!mainCtl.username">Hello, {{mainCtl.username}}!</h3>
-			<circle-img ci-src="img/MonaLisa.jpg" ci-diameter="50" ci-alt="Image of the Mona Lisa"></circle-img>
-			<circle-img ci-src="img/MonaLisa.jpg" ci-diameter="100" ci-alt="Bigger image of the Mona Lisa"></circle-img>
-			<circle-img ci-src="img/MonaLisa.jpg" ci-diameter="150" ci-alt="Really probably too big an image of the Mona Lisa"></circle-img>
+			<p class="lead" ng-hide="!mainCtl.username">Hello, {{mainCtl.username}}! This in an angular app!</p class="lead">
+
+			<div id="basic-functionality">
+				<h2>Basic Functionality</h2>
+			</div>
+			<p>Smaller than source image : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="48" ci-alt="Image of the Mona Lisa"></circle-img></p>
+			<p>Same diameter as smallest dimension of the source image : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="97" ci-alt="Bigger image of the Mona Lisa"></circle-img></p>
+			<p>It can even be set larger than the source image (some pixelation may occur in the upsizing) : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="144" ci-alt="Really probably too big an image of the Mona Lisa"></circle-img></p>
 		</div>
 	</div>
 </body>
