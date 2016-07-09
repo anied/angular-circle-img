@@ -44,6 +44,10 @@ export default function circleImg($timeout) {
 			scope.width = parseFloat(scope.width, 10);
 			scope.height = parseFloat(scope.height, 10);
 
+			testImg.parentElement.removeChild(testImg);
+
+			testImg = null; //Nulling it out to prevent any memory leaks-- *probably* overly cautious, as I don't *think* any reference would be held in any closures after this function completes...
+
 			$timeout(scope.$apply());
 
 		});
