@@ -27,7 +27,8 @@ export default function circleImg($timeout) {
 
 		document.body.appendChild(docfrag);
 
-		setTimeout(function () {
+		setTimeout(function () { // Using vanilla setTimeout bc we don't need to respect the $apply cycle for this
+			//TODO this can certainly be written more cleanly
 			const imgBounds = testImg.getBoundingClientRect();
 			if (imgBounds.height < imgBounds.width) {
 				scope.height = scope.ciDiameter;
