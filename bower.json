@@ -21,8 +21,10 @@
     "test",
     "tests"
   ],
+  "dependencies": {
+    "angular": "^1.2.0"
+  },
   "devDependencies": {
-    "angular": "~1.5.7",
     "bootstrap": "~3.3.6"
   }
 }
