@@ -14,6 +14,7 @@
 	<script src="js/app.js"></script>
 </head>
 <body>
+	<!-- TODO use mona up top, since we can't use her in the example anymore -->
 	<div class="container">
 		<h1>Angular Circle Img Example Page</h1>
 		<p class="lead">(Also to be leveraged for the purposes of development of the package)</p>
@@ -40,9 +41,9 @@
 
 			<div id="basic-functionality" class="container">
 				<h2>Basic Functionality</h2>
-				<p>Smaller than source image : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="48" ci-alt="Image of the Mona Lisa"></circle-img></p>
-				<p>Same diameter as smallest dimension of the source image : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="97" ci-alt="Bigger image of the Mona Lisa"></circle-img></p>
-				<p>It can even be set larger than the source image (some pixelation may occur in the upsizing) : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="144" ci-alt="Really probably too big an image of the Mona Lisa"></circle-img></p>
+				<p>Smaller than source image : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="57" ci-alt="Image of Van Gogh"></circle-img></p>
+				<p>Same diameter as smallest dimension of the source image : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="115" ci-alt="Bigger image of Van Gogh"></circle-img></p>
+				<p>It can even be set larger than the source image (some pixelation may occur in the upsizing) : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="172" ci-alt="Really probably too big an image of Van Gogh"></circle-img></p>
 			</div>
 
 			<div id="orientations" class="container">
@@ -52,6 +53,14 @@
 				<p>Portait : <circle-img ci-src="img/AmericanGothic.jpg" ci-diameter="125" ci-alt="American Gothic in a circle"></circle-img></p>
 				<p>Landscape : <circle-img ci-src="img/ASundayOnLaGrandeJatte.jpg" ci-diameter="125" ci-alt="A Sunday On La Grande Jatte in a circle"></circle-img></p>
 				<p>Square : <circle-img ci-src="img/BlackSuprematicSquare.jpg" ci-diameter="125" ci-alt="Black Suprematic Square in a circle"></circle-img></p>
+			</div>
+
+			<div id="balance" class="container">
+				<h2>Balance</h2>
+				<p>Looks weird without balance : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="125" ci-alt="Picture of the Mona Lisa in a circle-- but her head isn't totally visible" ></circle-img></p>
+				<p>Added balance to center the face in the circle : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="125" ci-balance-x="center" ci-balance-y="top" ci-alt="Picture of the Mona Lisa appropriately centered in a circle" ></circle-img></p>
+				<p>Also works for left/right : <circle-img ci-src="img/NightHawks.jpg" ci-diameter="125" ci-alt="Picture of the painting 'Nighthawks' in a circle (but off center)" ></circle-img> &rarr; <circle-img ci-src="img/NightHawks.jpg" ci-diameter="125" ci-balance-x="right" ci-balance-y="center" ci-alt="Picture of the painting 'Nighthawks' in a circle (but off center)" ></circle-img></p>
+				<p><i>(Omitted 'ci-balance' values will default to "center")</i></p>
 			</div>
 
 		</div>
