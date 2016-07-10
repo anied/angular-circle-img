@@ -50,7 +50,9 @@ export default function circleImg($timeout) {
 
 			testImg = null; //Nulling it out to prevent any memory leaks-- *probably* overly cautious, as I don't *think* any reference would be held in any closures after this function completes...
 
-			$timeout(scope.$apply());
+			$timeout(function () {
+				scope.$apply();
+			});
 
 		});
 
