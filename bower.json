@@ -1,11 +1,10 @@
 {
   "name": "angular_circle_img",
   "description": "Flexible directive to render a source image into a circle.",
-  "main": "index.js",
   "authors": [
     "Alexander Nied"
   ],
-  "license": "None",
+  "license": "MIT",
   "keywords": [
     "angular",
     "directive",
@@ -13,7 +12,7 @@
     "circle"
   ],
   "homepage": "https://github.com/anied/angular_circle_img",
-  "moduleType": [],
+  "moduleType": ["es6"],
   "private": true,
   "ignore": [
     "**/.*",
@@ -22,8 +21,10 @@
     "test",
     "tests"
   ],
+  "dependencies": {
+    "angular": "^1.2.0"
+  },
   "devDependencies": {
-    "angular": "~1.5.7",
     "bootstrap": "~3.3.6"
   }
 }
