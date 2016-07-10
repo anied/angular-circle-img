@@ -4,26 +4,65 @@
 	<title>Angular Circle Img Example Page</title>
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<!-- Not really using any minified scripts or styles as this is being run locally... -->
+	<!-- Add code samples, and prism-->
 	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/index.css">
 	<script src="lib/jquery/dist/jquery.js" ></script>
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="js/angularCircleImg.js"></script>
+	<script src="dist/angularCircleImg.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
+	<!-- TODO use mona up top, since we can't use her in the example anymore -->
 	<div class="container">
 		<h1>Angular Circle Img Example Page</h1>
 		<p class="lead">(Also to be leveraged for the purposes of development of the package)</p>
-		<div class="container" id="appWrapper" ng-app="app">
+		<div class="container" id="appWrapper" ng-app="app" ng-strict-di>
 			<form class="form-inline">
 			  <div class="form-group">
 			    <label for="username">Name</label>
 			    <input type="text" class="form-control" id="username" placeholder="&lt;your name&gt;" ng-model="mainCtl.username">
 			  </div>
 		  	</form>
-			<h3 ng-hide="!mainCtl.username">Hello, {{mainCtl.username}}!</h3>
-			<circle-img></circle-img>
+			<p class="lead" ng-hide="!mainCtl.username">Hello, {{mainCtl.username}}! This in an angular app!</p class="lead">
+
+			<div id="styling-note" class="container">
+				<h2>A Note About Styles</h2>
+				<p>For simplicity's sake, no css dependency is included with this package-- just the <strong>angular.min.js</strong> and corresponding <strong>.map</strong> files.  To make your CIs (Circle Images) behave more like standard images, add the following style somewhere in your CSS:</p>
+				<!-- bring in prism and style this properly-->
+				<pre>
+.ci-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+}
+				</pre>
+			</div>
+
+			<div id="basic-functionality" class="container">
+				<h2>Basic Functionality</h2>
+				<p>Smaller than source image : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="57" ci-alt="Image of Van Gogh"></circle-img></p>
+				<p>Same diameter as smallest dimension of the source image : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="115" ci-alt="Bigger image of Van Gogh"></circle-img></p>
+				<p>It can even be set larger than the source image (some pixelation may occur in the upsizing) : <circle-img ci-src="img/VanGogh.jpg" ci-diameter="172" ci-alt="Really probably too big an image of Van Gogh"></circle-img></p>
+			</div>
+
+			<div id="orientations" class="container">
+				<h2>Orientation</h2>
+				<!--TODO: show comparison images, fix alignments-->
+				<p>Handles any orientation:</p>
+				<p>Portait : <circle-img ci-src="img/AmericanGothic.jpg" ci-diameter="125" ci-alt="American Gothic in a circle"></circle-img></p>
+				<p>Landscape : <circle-img ci-src="img/ASundayOnLaGrandeJatte.jpg" ci-diameter="125" ci-alt="A Sunday On La Grande Jatte in a circle"></circle-img></p>
+				<p>Square : <circle-img ci-src="img/BlackSuprematicSquare.jpg" ci-diameter="125" ci-alt="Black Suprematic Square in a circle"></circle-img></p>
+			</div>
+
+			<div id="balance" class="container">
+				<h2>Balance</h2>
+				<p>Looks weird without balance : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="125" ci-alt="Picture of the Mona Lisa in a circle-- but her head isn't totally visible" ></circle-img></p>
+				<p>Added balance to center the face in the circle : <circle-img ci-src="img/MonaLisa.jpg" ci-diameter="125" ci-balance-x="center" ci-balance-y="top" ci-alt="Picture of the Mona Lisa appropriately centered in a circle" ></circle-img></p>
+				<p>Also works for left/right : <circle-img ci-src="img/NightHawks.jpg" ci-diameter="125" ci-alt="Picture of the painting 'Nighthawks' in a circle (but off center)" ></circle-img> &rarr; <circle-img ci-src="img/NightHawks.jpg" ci-diameter="125" ci-balance-x="right" ci-balance-y="center" ci-alt="Picture of the painting 'Nighthawks' in a circle (but off center)" ></circle-img></p>
+				<p><i>(Omitted 'ci-balance' values will default to "center")</i></p>
+			</div>
+
 		</div>
 	</div>
 </body>
