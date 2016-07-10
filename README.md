@@ -46,6 +46,7 @@ _Please note that all attributes are "@" scoped._
 - **ci-alt**: Text for the image `alt` attribute.
 - **ci-balance-x** _[optional: "left", "center", "right"]_: If included, shows preference to the left edge, center, or right edge of the image when the width is the larger dimension.  Default to `"center"` when omitted.
 - **ci-balance-y** _[optional: "top", "center", "bottom"]_: If included, shows preference to the top edge, center, or bottom edge of the image when the height is the larger dimension.  Default to `"center"` when omitted.
+- **ci-class** _[optional]_ String of space delineated class names you would like to add to the wrapper div portion of the circle-img markup.
 
 ## TODO List
 - Get the app shell setup
