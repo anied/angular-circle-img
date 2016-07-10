@@ -33,24 +33,21 @@ class circleImgCtl {
 			const nonCenterXFlag = $scope.ciBalanceX !== 'center'; // Flag stating the X value is not 'center'
 			const nonCenterYFlag = $scope.ciBalanceY !== 'center'; // Flag stating the Y value is not 'center'
 
-			// if ( nonCenterXFlag || nonCenterYFlag ) { 	// If either axis is not to be centered (as by default)...
-				imgStyleObj.position = 'absolute';		// position the image absolute
+			imgStyleObj.position = 'absolute';		// position the image absolute
 
-				if (nonCenterXFlag) {
-					imgStyleObj[$scope.ciBalanceX] = 0;
-				} else {
-					const pos = ((-($scope.width/2)) + ($scope.ciDiameter/2))+ 'px';
-					imgStyleObj.left = pos;
-				}
+			if (nonCenterXFlag) {
+				imgStyleObj[$scope.ciBalanceX] = 0;
+			} else {
+				const pos = ((-($scope.width/2)) + ($scope.ciDiameter/2))+ 'px';
+				imgStyleObj.left = pos;
+			}
 
-				if (nonCenterYFlag) {
-					imgStyleObj[$scope.ciBalanceY] = 0;
-				} else {
-					const pos = ((-($scope.height/2)) + ($scope.ciDiameter/2))+ 'px';
-					imgStyleObj.top = pos;
-				}
-
-			// }
+			if (nonCenterYFlag) {
+				imgStyleObj[$scope.ciBalanceY] = 0;
+			} else {
+				const pos = ((-($scope.height/2)) + ($scope.ciDiameter/2))+ 'px';
+				imgStyleObj.top = pos;
+			}
 
 			return imgStyleObj;
 

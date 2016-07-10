@@ -10,7 +10,8 @@ export default function circleImg($timeout) {
 		ciDiameter : '@',
 		ciAlt: '@',
 		ciBalanceX: '@',
-		ciBalanceY: '@'
+		ciBalanceY: '@',
+		ciClass: '@'
 	};
 	directive.link = function (scope, elem, attrs) {
 		let docfrag = document.createDocumentFragment();
@@ -59,7 +60,7 @@ export default function circleImg($timeout) {
 	};
 
 	directive.template = `
-		<div class="ci-wrapper" ng-style="circleImgCtl.wrapperStyle()">
+		<div class="ci-wrapper" ng-style="circleImgCtl.wrapperStyle()" ng-class="ciClass">
 			<img ng-src="{{ciSrc}}" alt="{{ciAlt}}" height="{{height}}" width="{{width}}" ng-style="circleImgCtl.imgStyle()">
 		</div>
 	`;
