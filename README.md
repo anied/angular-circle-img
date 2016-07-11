@@ -5,6 +5,13 @@
 
 ## Basic Usage
 
+### Installation
+**Angular Circle Image** can be installed using bower:
+
+```sh
+$ bower install angular-circle-img --save
+```
+
 ### Including The Directive In Your Project
 To use **Angular Circle Image** you must add the `dist` directory into your project and include the code in your page:
 
