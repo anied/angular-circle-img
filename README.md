@@ -1,7 +1,7 @@
 # Angular Circle Img (angular-circle-img)
 
 ## Description
-**Angular Circle Image** is intended to be a flexible directive to render a source image into a circle and intelligently size it to avoid and distortion of the image often caused by dimension mismatches.  It is currently at version 0.2.0 and under development.
+**Angular Circle Image** is intended to be a flexible directive to render a source image into a circle and intelligently size it to avoid and distortion of the image often caused by dimension mismatches.  It is currently under development and has not yet reached a major version release.
 
 ## Basic Usage
 
@@ -47,6 +47,9 @@ _Please note that all attributes are "@" scoped._
 - **ci-balance-x** _[optional: "left", "center", "right"]_: If included, shows preference to the left edge, center, or right edge of the image when the width is the larger dimension.  Default to `"center"` when omitted.
 - **ci-balance-y** _[optional: "top", "center", "bottom"]_: If included, shows preference to the top edge, center, or bottom edge of the image when the height is the larger dimension.  Default to `"center"` when omitted.
 - **ci-class** _[optional]_ String of space delineated class names you would like to add to the wrapper div portion of the circle-img markup.
+
+### How It Works
+Natural image size can only be measured in the DOM-- as such, the directive code appends the image (hidden with positioning and opacity) to the DOM to ascertain its natural dimensions, and uses those dimensions to calculate how to fit the image into a circle.  The image is then removed from the DOM.  There are no benchmarks yet as to the performance of this approach, so it may be wise to do some testing if you intend to use this on many elements on a given page or application.
 
 ## TODO List
 - Get the app shell setup
