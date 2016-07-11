@@ -1,4 +1,4 @@
-# Angular Circle Img (angular_circle_img)
+# Angular Circle Img (angular-circle-img)
 
 ## Description
 **Angular Circle Image** is intended to be a flexible directive to render a source image into a circle and intelligently size it to avoid and distortion of the image often caused by dimension mismatches.  It is currently at version 0.2.0 and under development.

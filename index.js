@@ -22,7 +22,7 @@ single_page_app.get('*',function (req, res, next) {
 });
 
 single_page_app.listen(config.port, function () {
-	console.log(('* * *  ').red+('YOU ARE RUNNING THE ANGULAR_CIRCLE_IMG DEVELOPMENT ENVIRONMENT').green+('  * * *').red);
+	console.log(('* * *  ').red+('YOU ARE RUNNING THE ANGULAR-CIRCLE-IMG DEVELOPMENT ENVIRONMENT').green+('  * * *').red);
 	// console.log(''); // Is it the smartest way to do a newline?  No.  But it's easier to parse visually than a '\n' at the end of every line where I want it
 	console.log(('(Based on https://github.com/anied/stupid_simple_node_single_page_app_project_shell)').grey);
 	console.log(''); // Is it the smartest way to do a newline?  No.  But it's easier to parse visually than a '\n' at the end of every line where I want it

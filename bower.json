@@ -1,5 +1,5 @@
 {
-  "name": "angular_circle_img",
+  "name": "angular-circle-img",
   "description": "Flexible directive to render a source image into a circle.",
   "authors": [
     "Alexander Nied"
@@ -11,7 +11,7 @@
     "image",
     "circle"
   ],
-  "homepage": "https://github.com/anied/angular_circle_img",
+  "homepage": "https://github.com/anied/angular-circle-img",
   "moduleType": ["es6"],
   "private": true,
   "ignore": [
