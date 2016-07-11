@@ -13,7 +13,7 @@
   ],
   "homepage": "https://github.com/anied/angular-circle-img",
   "moduleType": ["es6"],
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
